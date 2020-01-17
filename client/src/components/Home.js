@@ -2,7 +2,7 @@
  *
  */
 import React, { Component } from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 
 /* Step 2
  * Rename this class to reflect the component being created
@@ -25,12 +25,7 @@ export default class Home extends Component {
     *   setState can be run here as well
     *   -REMINDER remember `setState` it is an async function
     */
-    componentDidMount() {
-        axios.get('/api/helloworld')
-            .then((res) => {
-                this.setState({message: res.data})
-            })
-    }
+
 
     /* Step 5
     *  The render function manages what is shown in the browser
@@ -41,8 +36,9 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                {/* Accessing the value of message from the state object */}
-                <h1>{this.state.message}</h1>
+                <div>
+                    <p>Hi</p>
+                </div>
             </div>
         )
     }

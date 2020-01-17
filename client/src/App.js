@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './components/Home.js/index.js'
+import Home from './components/Home.js'
+import CreatePost from './components/CreatePost.js'
+// import SinglePost from './components/SinglePost.js'
 import './App.css';
 
 function App() {
@@ -10,7 +12,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/create-post" component={CreatePost}/>
-          <Route exact path="/single-post" component={SinglePost}/>
+          {/* <Route exact path="/single-post" component={SinglePost}/> */}
         </Switch>
       </Router>
     </div>
