@@ -28,28 +28,21 @@ export default class Home extends Component {
         this.setState(newState)
     }
 
-    allPost = () => {
-        axios.get('/api/post')
-          .then((res) => {
-              this.setState({post: res.data})
-          })
-    }
-
     updatePage = () => {
         axios.get('/api/post')
           .then((res) => {
-              this.setState({ post: res.data})
+              this.setState({ postList: res.data})
           })
     }
 
-    render() {
+    render() { 
         return (
             <div>
                 <div>
                     <h1>Welcome To Rush</h1>
                 </div>
-                {this.state.postList.map((post) => {
-                  return(
+                {this.state.postList.map((post) => {                    
+                  return( 
                       <Link to={`/${post._id}`}>
                         <div id="posthousing">
                           <div id="image">
@@ -63,8 +56,8 @@ export default class Home extends Component {
                           </div> 
                         </div>
                       </Link>
-                  )
-              })} 
+                   ) 
+               })}  
             </div>
         )
     }
