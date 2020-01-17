@@ -31,3 +31,25 @@
     transform: rotate(360deg);
   }
 }
+#posthousing {
+  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+  /* border: red solid 2px; */
+  border-radius: 20px;
+  margin: 100px 300px;
+}
+
+#image {
+  background-color: black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: auto auto;
+  padding: 100px 100px;
+  color: aliceblue;
+}
+#posttextcontent {
+  border: black solid 1px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: auto auto;
+  padding: 25px 95px;
+}

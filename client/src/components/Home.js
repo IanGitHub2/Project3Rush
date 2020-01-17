@@ -39,6 +39,17 @@ export default class Home extends Component {
                 <div>
                     <p>Hi</p>
                 </div>
+              <div id="posthousing">
+                <div id="image">
+                    <div>Image goes here</div>
+                </div>
+                <div id="posttextcontent">
+                    <div>Title goes here</div>
+                    <div>Manufacturer</div>
+                    <div>Model</div>
+                    <div>Description</div>
+                </div> 
+              </div> 
             </div>
         )
     }
