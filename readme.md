@@ -6,7 +6,7 @@
 - [Heroku]()
 
 # WireFrame
-
+![WireFrame](./20200117_090230.jpg)
 # Over View
 ### Home Page
   - Holds the post the user creates
