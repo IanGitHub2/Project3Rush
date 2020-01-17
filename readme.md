@@ -1,4 +1,57 @@
-# mern-template-project
+# Project 3
+## Rush
+
+- [GitHub](https://git.generalassemb.ly/IanGtHbE1/Project-3-Rush.git)
+- [Trello]()
+- [Heroku]()
+
+# WireFrame
+
+# Over View
+### Home Page
+  - Holds the post the user creates
+  - The user can create a post
+  - Data base 1 holds manufacturer and Data base 2 holds model of the vehicle
+
+### Post 
+  - Holds a single post that was clicked on
+  - The user can update or delete the post
+
+### Creating a Post page
+  - The user can use two data bases in creating a post
+  - The user can add these fields to a post:
+    - Title
+    - image
+    - description
+    - manufacturer
+    - model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- # mern-template-project
 
 # Setup A New Project From This Template
 
@@ -28,4 +81,4 @@ following:
 1. `git commit -m "init repo with readme.md"`
 1. `npm init`
 1. `mkdir models views controllers`
-1. `touch ./server.js`
+1. `touch ./server.js` -->
