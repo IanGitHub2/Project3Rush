@@ -16,7 +16,7 @@ const app = express()
  * import routers from controllers/
  *
  */
-const { creatPostRouter } = require('./controllers/createPost.js')
+const { postRouter } = require('./controllers/post.js')
 
 
 /* Step 3
@@ -49,7 +49,7 @@ app.use(express.static(`${__dirname}/client/build`))
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/api/createPost', creatPostRouter)
+app.use('/api/post', postRouter)
 
 /* Step 5
  *

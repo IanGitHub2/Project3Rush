@@ -37,7 +37,7 @@ export default class Home extends Component {
         return (
             <div>
                 <div>
-                    <p>Hi</p>
+                    <h1>Welcome To Rush</h1>
                 </div>
               <div id="posthousing">
                 <div id="image">
