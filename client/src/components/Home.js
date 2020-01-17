@@ -8,7 +8,7 @@ import axios from 'axios'
  * Rename this class to reflect the component being created
  *
  */
-export default class HelloWorld extends Component {
+export default class Home extends Component {
 
     /* Step 3
     * Create a state for the component to store view data
