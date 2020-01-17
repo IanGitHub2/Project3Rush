@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema({
   title: String,
   image: String,
-  description: String,
+  description: String
 }) 
 
 const PostCollection = mongoose.model('Post', PostSchema)

@@ -18,9 +18,9 @@ postRouter.get('/:postId', (req, res) => {
 })
 
 postRouter.post('/', (req, res) => {
-  postApi.addPost(req/body)
+  postApi.addPost(req.body)
     .then((post) => {
-      res.json({})
+      res.json({post})
     })
 })
 

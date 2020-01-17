@@ -1,55 +1,70 @@
-/* Step 1 import React, { Component } and axios
- *
- */
 import React, { Component } from 'react'
-// import axios from 'axios'
-
-/* Step 2
- * Rename this class to reflect the component being created
- *
- */
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 export default class Home extends Component {
 
-    /* Step 3
-    * Create a state for the component to store view data
-    *
-    */
     state = {
-        message: ''
+      postList: [],  
+      newPost: {
+        title: '',
+        image: '',
+        description: ''
+      }
     }
 
-    /* Step 4
-    * Use componentDidMount to retrieve any data to display
-    *   Here you can make calls to your local express server
-    *   or to an external API
-    *   setState can be run here as well
-    *   -REMINDER remember `setState` it is an async function
-    */
+    componentDidMount() {
+        axios.get('/api/post')
+          .then((res) => {
+              this.setState({ postList: res.data })
+          })
+    }
 
+    postInputChanges = (event) => {
+        const value = event.target.value
+        const title = event.target.title
 
-    /* Step 5
-    *  The render function manages what is shown in the browser
-    *  TODO: delete the jsx returned
-    *   and replace it with your own custom jsx template
-    *
-    */
+        const newState = {...this.state}
+        newState.newPost[title] = value
+        this.setState(newState)
+    }
+
+    allPost = () => {
+        axios.get('/api/post')
+          .then((res) => {
+              this.setState({post: res.data})
+          })
+    }
+
+    updatePage = () => {
+        axios.get('/api/post')
+          .then((res) => {
+              this.setState({ post: res.data})
+          })
+    }
+
     render() {
         return (
             <div>
                 <div>
                     <h1>Welcome To Rush</h1>
                 </div>
-              <div id="posthousing">
-                <div id="image">
-                    <div>Image goes here</div>
-                </div>
-                <div id="posttextcontent">
-                    <div>Title goes here</div>
-                    <div>Manufacturer</div>
-                    <div>Model</div>
-                    <div>Description</div>
-                </div> 
-              </div> 
+                {this.state.postList.map((post) => {
+                  return(
+                      <Link to={`/${post._id}`}>
+                        <div id="posthousing">
+                          <div id="image">
+                            <div>Image goes here{post.image}</div>
+                          </div>
+                        <div id="posttextcontent">
+                            <div>{post.title}</div>
+                            <div>Manufacturer</div>
+                            <div>Model</div>
+                            <div>Description:{post.description}</div>
+                          </div> 
+                        </div>
+                      </Link>
+                  )
+              })} 
             </div>
         )
     }
