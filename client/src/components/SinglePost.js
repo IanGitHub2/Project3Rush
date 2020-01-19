@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-export default class CreatePost extends React.Component {
+export default class SinglePost extends React.Component {
 
   state = {
     newPost: {
@@ -45,7 +45,7 @@ export default class CreatePost extends React.Component {
   render() {
       return(
          <div>
-          <h1>Create Post Page</h1>
+          <h1>Single Post Page and create post</h1>
           <Link to="/">Home</Link>
           <div>
             {
