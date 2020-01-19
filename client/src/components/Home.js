@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import SinglePost from './SinglePost'
+import PostList from './PostList'
 export default class Home extends Component {
 
     state = {
       postList: [],  
-      newPost: {
-        title: '',
-        image: '',
-        description: ''
-      }
+      // newPost: {
+      //   title: '',
+      //   image: '',
+      //   description: ''
+      // }
     }
 
     componentDidMount() {
@@ -35,13 +37,25 @@ export default class Home extends Component {
           })
     }
 
+    createNewPost = () => {
+      const newPost = {
+        title: this.state.newPost,
+      }
+      axios.post('/api/post', newPost)
+        .then(() => {
+          this.updatePage()
+        })     
+    }
+
     render() { 
         return (
             <div>
                 <div>
                     <h1>Welcome To Rush</h1>
                 </div>
-                {this.state.postList.map((post) => {                    
+                <PostList/>
+                <SinglePost/>
+                {/* {this.state.postList.map((post) => {                    
                   return( 
                       <Link to={`/${post._id}`}>
                         <div id="posthousing">
@@ -57,7 +71,7 @@ export default class Home extends Component {
                         </div>
                       </Link>
                    ) 
-               })}  
+               })}   */}
             </div>
         )
     }
