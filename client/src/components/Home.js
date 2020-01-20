@@ -3,15 +3,17 @@ import axios from 'axios'
 // import { Link } from 'react-router-dom'
 import SinglePost from './SinglePost'
 import PostList from './PostList'
+
 export default class Home extends Component {
 
     state = {
-      postList: [],  
-      // newPost: {
-      //   title: '',
-      //   image: '',
-      //   description: ''
-      // }
+      postList: [
+        {
+          title: 'New Post',
+          image: 'BoB',
+          description: 'this should be the first post'
+        }
+      ],  
     }
 
     componentDidMount() {
@@ -53,7 +55,7 @@ export default class Home extends Component {
                 <div>
                     <h1>Welcome To Rush</h1>
                 </div>
-                <PostList/>
+                <PostList postList={this.state.postList}/>
                 <SinglePost/>
                 {/* {this.state.postList.map((post) => {                    
                   return( 
@@ -70,8 +72,8 @@ export default class Home extends Component {
                           </div> 
                         </div>
                       </Link>
-                   ) 
-               })}   */}
+                   )  */}
+               {/* })}   */}
             </div>
         )
     }

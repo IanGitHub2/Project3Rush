@@ -7,6 +7,7 @@ const newPost = {
 }
 
 export default class CreatePostForm extends React.Component {
+    
   state = {
       newPost: {...newPost}
   }
