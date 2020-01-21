@@ -54,14 +54,14 @@ export default class CreatePostForm extends React.Component {
                           placeholder="Image"/>
                   </div>
                   <div>
-                      <input
-                          type="text"
-                          placeholder="Manuf-"/>
+                      <select>
+
+                      </select>
                   </div>
                   <div>
-                      <input
-                          type="text"
-                          placeholder="Model"/>
+                      <select>
+                          
+                      </select>
                   </div>
                   <div>
                       <input
