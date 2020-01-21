@@ -9,20 +9,20 @@ postRouter.get('/', (req, res) => {
       res.json(allPost)
     })
 })
-
-postRouter.get('/:postId', (req, res) => {
-  postApi.singlePost()
-    .then((post) => {
-      res.json(post)
-    })
-})
-
 postRouter.post('/', (req, res) => {
   postApi.addPost(req.body)
     .then((post) => {
       res.json({post})
     })
 })
+
+postRouter.get('/:postId', (req, res) => {
+  postApi.singlePost(req.params.postId)
+    .then((post) => {
+      res.json(post)
+    })
+})
+
 
 postRouter.put('/:postId', (req, res) => {
   postApi.updatePost(req.params.postId, req.body)

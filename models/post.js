@@ -26,7 +26,7 @@ const updatePost = (postId, updatePost) => {
 }
 
 const deletePost = (postId) => {
-  return PostCollection.deleteOne({id_: postId})
+  return PostCollection.deleteOne({_id: postId})
 }
 
 module.exports = {

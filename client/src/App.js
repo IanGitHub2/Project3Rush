@@ -4,6 +4,7 @@ import Home from './components/Home.js'
 // import SinglePost from './components/SinglePost.js/index.js'
 import SinglePost from './components/SinglePost.js'
 import './App.css';
+import CreatePostForm from './components/CreatePostForm.js';
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home}/>
-          {/* <Route exact path="/create-post" component={CreatePost}/> */}
-          <Route exact path="/single-post" component={SinglePost}/>
+          <Route exact path="/create-post" component={CreatePostForm}/>
+          <Route exact path="/single-post/:postId" component={SinglePost}/>
         </Switch>
       </Router>
     </div>

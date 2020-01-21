@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from 'axios'
+// import {Redirect} from 'react-router-dom'
 
 const newPost = {
     title: '',
@@ -14,7 +16,7 @@ export default class CreatePostForm extends React.Component {
 
   handleChanges = (event) => {
       const newValue = event.target.value
-      const field = event.target.title
+      const field = event.target.name
 
       const newState = {...this.state}
       newState.newPost[field] = newValue
@@ -24,21 +26,23 @@ export default class CreatePostForm extends React.Component {
 
   formSubmit = (event) => {
       event.preventDefault()
-      const newPost = {...this.state.newPost}
-      this.props.addPost(newPost)
-      this.setState({newPost: {...newPost}})
+      axios.post('/api/post/', this.state.newPost)
+    //   .then(() => {
+    //       this.setState({redirect: true})
+    //   })
   }
 
   render(){
       return(
           <div>
-              <form>
+              {/* {this.state.redirect === true ? <Redirect to='/' /> : null} */}
+              <form onSubmit={this.formSubmit}>
                   <div>
                       <input 
                         type="text" 
                         name="title"
                         value={this.state.newPost.title}
-                        onChange={this.postInputChanges}
+                        onChange={this.handleChanges}
                         placeholder="Title"/>
                   </div>
                   <div>
@@ -46,7 +50,7 @@ export default class CreatePostForm extends React.Component {
                           type="text"
                           name="image"
                           value={this.state.newPost.image}
-                          onChange={this.postInputChanges} 
+                          onChange={this.handleChanges} 
                           placeholder="Image"/>
                   </div>
                   <div>
@@ -64,7 +68,7 @@ export default class CreatePostForm extends React.Component {
                           type="text"
                           name="description"
                           value={this.state.newPost.description}
-                          onChange={this.postInputChanges} 
+                          onChange={this.handleChanges} 
                           placeholder="Description"/>
                   </div>
                   <input type="submit" value="Create"/>

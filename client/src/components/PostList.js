@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default class PostList extends React.Component {
     render(){
@@ -9,7 +10,9 @@ export default class PostList extends React.Component {
                 return(
                   <div id="posthousing">
                     <div id="image">
-                      <div>Image goes here{post.image}</div>
+                      <Link to={`/single-post/${post._id}`}>
+                        <div>Image goes here{post.image}</div>
+                      </Link> 
                     </div>
                     <div>
                       <div>{post.title}</div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-// import { Link } from 'react-router-dom'
-import SinglePost from './SinglePost'
+import { Link } from 'react-router-dom'
+// import SinglePost from './SinglePost'
 import PostList from './PostList'
 
 export default class Home extends Component {
@@ -9,9 +9,9 @@ export default class Home extends Component {
     state = {
       postList: [
         {
-          title: 'New Post',
-          image: 'BoB',
-          description: 'this should be the first post'
+          title: '',
+          image: '',
+          description: ''
         }
       ],  
     }
@@ -54,26 +54,11 @@ export default class Home extends Component {
             <div>
                 <div>
                     <h1>Welcome To Rush</h1>
+                    <Link to={`/create-post`}>
+                      <button>Create Post</button>
+                    </Link>
                 </div>
                 <PostList postList={this.state.postList}/>
-                <SinglePost/>
-                {/* {this.state.postList.map((post) => {                    
-                  return( 
-                      <Link to={`/${post._id}`}>
-                        <div id="posthousing">
-                          <div id="image">
-                            <div>Image goes here{post.image}</div>
-                          </div>
-                        <div id="posttextcontent">
-                            <div>{post.title}</div>
-                            <div>Manufacturer</div>
-                            <div>Model</div>
-                            <div>Description:{post.description}</div>
-                          </div> 
-                        </div>
-                      </Link>
-                   )  */}
-               {/* })}   */}
             </div>
         )
     }
