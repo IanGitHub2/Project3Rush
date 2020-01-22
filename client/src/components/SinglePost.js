@@ -40,12 +40,12 @@ export default class SinglePost extends React.Component {
          {this.state.redirect === true ? <Redirect to='/' /> : null}
         <Link to={`/`}>Home</Link>
         <div>
-          <h1>Single Post page and Delete page</h1>
+          <h1 id="pageheader">{this.state.post.title}</h1>
           <div>
             <div>
-              <img src={this.state.post.image} alt="car"/>
+              <img src={this.state.post.image} alt="car" id="singleimage"/>
             </div>
-            <div>
+            <div id="singleposthousing">
               <div>{this.state.post.title}</div>
               <div>Manufacturer</div>
               <div>Model</div>

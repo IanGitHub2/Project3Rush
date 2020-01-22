@@ -4,6 +4,7 @@ import Home from './components/Home.js'
 import SinglePost from './components/SinglePost.js'
 import './App.css';
 import './components/home.css';
+import './components/singlepage.css'
 import './create.css';
 import CreatePostForm from './components/CreatePostForm.js';
 
