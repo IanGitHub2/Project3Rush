@@ -6,9 +6,11 @@ import {Redirect} from 'react-router-dom'
 export default class SinglePost extends React.Component {
   state = {
     post: {
-      title: "",
-      image: "",
-      description: ""
+      title: '',
+      image: '',
+      manu: '',
+      model: '',
+      description: ''
     }
   };
 
@@ -47,11 +49,14 @@ export default class SinglePost extends React.Component {
             </div>
             <div id="singleposthousing">
               <div>{this.state.post.title}</div>
-              <div>Manufacturer</div>
-              <div>Model</div>
+              <div>Manufacturer{this.state.manu}</div>
+              <div>Model{this.state.model}</div>
               <div>Description:{this.state.post.description}</div>
             </div>
-            <button onClick={this.deletePost}>Delete</button>
+            <Link to={`/update-post`}>
+              <button>Update Post</button>
+            </Link>
+            <button onClick={this.deletePost} id="deletebutton">Delete</button>
           </div>
         </div>
       </div>

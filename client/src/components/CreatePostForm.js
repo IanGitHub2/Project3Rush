@@ -7,7 +7,7 @@ import model from './ModelDB'
 const newPost = {
     title: '',
     image: '',
-    manufacture: '',
+    manu: '',
     model: '',
     description: ''
 }
@@ -62,14 +62,14 @@ export default class CreatePostForm extends React.Component {
                       <select>
                         {manufacture.map((builder, i ) => {
                             return (
-                              <option>{manufacture[i]}</option>
+                            <option>{manufacture[i]}</option>
                             )                         
                         })}
                       </select>
                   </div>
                   <div>
                       <select>
-                          {model.map((Mod, j) => {
+                          {model.map((mod, j) => {
                               return(
                                   <option>{model[j]}</option>
                               )

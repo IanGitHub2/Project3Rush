@@ -18,7 +18,7 @@ export default class PostList extends React.Component {
                     </div>
                     <div id="infolist">
                       <div id="title">{post.title}</div>
-                      <div id="manufacture">Manufacturer{post.manufacture}</div>
+                      <div id="manufacture">Manufacturer{post.manu}</div>
                       <div id="model">Model{post.model}</div>
                     </div>
                     <div>  

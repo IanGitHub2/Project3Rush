@@ -18,3 +18,8 @@
     margin: 10px auto;
     padding: 10px 10px;
 }
+#deletebutton {
+    display: inline-block;
+    background-color: red;
+    border-radius: 5px;
+}

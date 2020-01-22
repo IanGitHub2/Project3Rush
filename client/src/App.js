@@ -2,11 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/Home.js'
 import SinglePost from './components/SinglePost.js'
+import CreatePostForm from './components/CreatePostForm.js';
+import UpdatePost from './UpdatePost'
 import './App.css';
 import './components/home.css';
 import './components/singlepage.css'
 import './create.css';
-import CreatePostForm from './components/CreatePostForm.js';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/create-post" component={CreatePostForm}/>
           <Route exact path="/single-post/:postId" component={SinglePost}/>
+          <Route exact peth="/update-post/:postId" component={UpdatePost}/>
         </Switch>
       </Router>
     </div>
