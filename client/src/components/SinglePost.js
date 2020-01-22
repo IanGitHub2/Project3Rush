@@ -43,7 +43,7 @@ export default class SinglePost extends React.Component {
           <h1>Single Post page and Delete page</h1>
           <div>
             <div>
-              <img src={this.state.post.image}/>
+              <img src={this.state.post.image} alt="car"/>
             </div>
             <div>
               <div>{this.state.post.title}</div>

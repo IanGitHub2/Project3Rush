@@ -11,7 +11,7 @@ export default class PostList extends React.Component {
                   <div id="posthousing">
                     <div id="image">
                       <Link to={`/single-post/${post._id}`}>
-                        <img src={post.image} alt="cars" width="400" height="200"/>
+                        <img src={post.image} alt="car" width="400" height="200"/>
                       </Link> 
                     </div>
                     <div id="infolist">

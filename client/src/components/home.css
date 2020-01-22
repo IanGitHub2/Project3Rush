@@ -31,7 +31,7 @@
     border-radius: 10px;
     border-color: gray;
     color: white;
-    background-color: black;
+    background-color: red;
     box-shadow: -4px 5px 0px 0px rgba(0,0,0,0.75);
 }
 
@@ -39,6 +39,17 @@
     display: inline-block;
     box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
     border-radius: 20px;
+    max-height: 200px;
+    max-width: 500px;
+    margin: 10px 10px;
+    overflow: scroll;
+  }
+
+  #posthousing:hover {
+    display: inline-block;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    border: red solid 2px;
     max-height: 200px;
     max-width: 500px;
     margin: 10px 10px;
