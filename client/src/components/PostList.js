@@ -11,14 +11,16 @@ export default class PostList extends React.Component {
                   <div id="posthousing">
                     <div id="image">
                       <Link to={`/single-post/${post._id}`}>
-                        <div>Image goes here{post.image}</div>
+                        <img src={post.image} alt="cars" width="400" height="200"/>
                       </Link> 
                     </div>
-                    <div>
-                      <div>{post.title}</div>
-                      <div>Manufacturer</div>
-                      <div>Model</div>
-                      <div>Description:{post.description}</div>
+                    <div id="infolist">
+                      <div id="title">{post.title}</div>
+                      <div id="manufacture">Manufacturer</div>
+                      <div id="model">Model</div>
+                    </div>
+                    <div>  
+                      <div>Description: {post.description}</div>
                     </div>
                   </div>
                 )

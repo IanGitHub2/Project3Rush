@@ -41,9 +41,9 @@ export default class SinglePost extends React.Component {
         <Link to={`/`}>Home</Link>
         <div>
           <h1>Single Post page and Delete page</h1>
-          <div id="posthousing">
-            <div id="image">
-              <div>Image goes here{this.state.post.image}</div>
+          <div>
+            <div>
+              <img src={this.state.post.image}/>
             </div>
             <div>
               <div>{this.state.post.title}</div>

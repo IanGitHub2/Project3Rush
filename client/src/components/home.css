@@ -1,9 +1,10 @@
 #bodyid {
     display: inline-block;
 }
-.App {
+/* .App {
   
-}
+} */
+
 #homepagecontainer {
     text-align: center;
     margin: 30px;
@@ -49,7 +50,7 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     margin: auto auto;
-    padding: 100px 100px;
+    /* padding: 100px 100px; */
     color: aliceblue;
   }
   #posttextcontent {
@@ -59,3 +60,19 @@
     margin: auto auto;
     padding: 25px 95px;
   }
+
+#infolist {
+    display: flex;
+}
+
+#title {
+    margin-left: 25px;
+}
+
+#manufacture {
+    margin-left: 25px;
+}
+
+#model {
+    margin-left: 25px;
+}
