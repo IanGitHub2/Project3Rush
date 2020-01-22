@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {Redirect} from 'react-router-dom'
+// import ManufactureDB from './ManufactureDB'
 
 const newPost = {
     title: '',
@@ -23,6 +24,11 @@ export default class CreatePostForm extends React.Component {
 
       this.setState(newState)
   }
+//   getmanufacture = () => {
+//       axios.get(`/api/manufactre/`).then(res => {
+//         this.setState({ ManufactureDB: res.data });
+//       });
+//   }
 
   formSubmit = (event) => {
       event.preventDefault()
@@ -56,7 +62,7 @@ export default class CreatePostForm extends React.Component {
                   </div>
                   <div>
                       <select>
-
+                          <option>{this.props.ManufactureDB}</option>
                       </select>
                   </div>
                   <div>
