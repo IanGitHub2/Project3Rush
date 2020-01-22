@@ -7,6 +7,8 @@ import model from './ModelDB'
 const newPost = {
     title: '',
     image: '',
+    manufacture: '',
+    model: '',
     description: ''
 }
 

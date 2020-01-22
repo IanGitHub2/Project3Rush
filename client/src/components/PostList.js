@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+// import manufacture from './ManufactureDB'
+// import model from './ModelDB'
 
 export default class PostList extends React.Component {
     render(){
@@ -16,8 +18,8 @@ export default class PostList extends React.Component {
                     </div>
                     <div id="infolist">
                       <div id="title">{post.title}</div>
-                      <div id="manufacture">Manufacturer</div>
-                      <div id="model">Model</div>
+                      <div id="manufacture">Manufacturer{post.manufacture}</div>
+                      <div id="model">Model{post.model}</div>
                     </div>
                     <div>  
                       <div>Description: {post.description}</div>
