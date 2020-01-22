@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-// import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 
 const newPost = {
     title: '',
@@ -27,16 +27,17 @@ export default class CreatePostForm extends React.Component {
   formSubmit = (event) => {
       event.preventDefault()
       axios.post('/api/post/', this.state.newPost)
-    //   .then(() => {
-    //       this.setState({redirect: true})
-    //   })
+      .then(() => {
+          this.setState({redirect: true})
+      })
   }
 
   render(){
       return(
           <div>
-              {/* {this.state.redirect === true ? <Redirect to='/' /> : null} */}
+              <h1>Create a Post</h1>
               <form onSubmit={this.formSubmit}>
+              {this.state.redirect === true ? <Redirect to='/' /> : null}
                   <div>
                       <input 
                         type="text" 
@@ -71,7 +72,7 @@ export default class CreatePostForm extends React.Component {
                           onChange={this.handleChanges} 
                           placeholder="Description"/>
                   </div>
-                  <input type="submit" value="Create"/>
+                  <input type="submit" value="Create" id="createformbutton"/>
               </form>
           </div>
       )

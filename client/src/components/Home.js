@@ -51,14 +51,16 @@ export default class Home extends Component {
 
     render() { 
         return (
-            <div>
+            <div id="bodyid">
                 <div>
-                    <h1>Welcome To Rush</h1>
+                    <h1 id="welcometitle">Welcome To Rush</h1>
                     <Link to={`/create-post`}>
-                      <button>Create Post</button>
+                      <button id="createbutton">Create Post</button>
                     </Link>
                 </div>
-                <PostList postList={this.state.postList}/>
+                <div id="homepagecontainer">
+                  <PostList postList={this.state.postList}/>
+                </div>
             </div>
         )
     }

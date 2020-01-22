@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/Home.js'
-// import SinglePost from './components/SinglePost.js/index.js'
 import SinglePost from './components/SinglePost.js'
 import './App.css';
+import './components/home.css';
+import './create.css';
 import CreatePostForm from './components/CreatePostForm.js';
 
 function App() {

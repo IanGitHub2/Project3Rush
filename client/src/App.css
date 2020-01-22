@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -31,9 +31,8 @@
     transform: rotate(360deg);
   }
 }
-#posthousing {
+/* #posthousing {
   box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
-  /* border: red solid 2px; */
   border-radius: 20px;
   margin: 100px 300px;
 }
@@ -52,4 +51,4 @@
   border-bottom-right-radius: 20px;
   margin: auto auto;
   padding: 25px 95px;
-}
+} */
