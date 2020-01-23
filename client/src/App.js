@@ -6,6 +6,9 @@ import CreatePostForm from './components/CreatePostForm.js'
 import HouseHome from './components/HouseHome.js'
 import SingleHouse from './components/SingleHouse.js'
 import CreateHouseForm from './components/CreateHouseForm.js'
+import ShoeHome from './components/ShoeHome.js'
+import SingleShoe from './components/SingleShoe.js'
+import CreateShoeForm from './components/CreateShoeForm.js'
 // import UpdatePost from './UpdatePost'
 import './App.css';
 import './components/home.css';
@@ -24,6 +27,9 @@ function App() {
           <Route exact path="/house-home" component={HouseHome}/>
           <Route exact path="/create-house" component={CreateHouseForm}/>
           <Route exact path="/single-house/:houseId" component={SingleHouse}/>
+          <Route exact path="/shoe-home" component={ShoeHome}/>
+          <Route exact path="/create-shoe" component={CreateShoeForm}/>
+          <Route exact path="/single-shoe/:shoeId" component={SingleShoe}/>
         </Switch>
       </Router>
     </div>
