@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Home from './components/Home.js'
 import SinglePost from './components/SinglePost.js'
 import CreatePostForm from './components/CreatePostForm.js'
@@ -19,6 +19,11 @@ function App() {
   return (
     <div className="App">
       <Router>
+      <ul>
+        <Link to={'/'}>Rush </Link>
+        <Link to={'/house-home'}> / Homes </Link>
+        <Link to={'/shoe-home'}> / Shoes</Link>
+      </ul>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/create-post" component={CreatePostForm}/>
