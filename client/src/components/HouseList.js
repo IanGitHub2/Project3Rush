@@ -5,11 +5,11 @@ export default class HouseList extends React.Component {
     render(){
         return(
         <div>
-          {this.props.HouseList.map((house, i) =>{
+          {this.props.houseList.map((house, i) =>{
             return(
               <div>
                 <div>
-                  <Link>
+                  <Link to={`/single-house/${house._id}`}>
                     <img src={house.image} alt="house" width="400" height="200"/>
                   </Link>
                 </div>

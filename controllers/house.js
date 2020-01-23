@@ -9,15 +9,15 @@ houseRouter.get('/', (req, res) => {
       })
 })
 
-houseRouter.get('/:houseId', (req, res) => {
-    houseApi.singleHouse(req.params.houseId)
+houseRouter.post('/', (req, res) => {
+    houseApi.addHouse(req.body)
       .then((house) => {
-          res.json(house)
+          res.json({house})
       })
 })
 
-houseRouter.post('/', (req, res) => {
-    houseApi.addHouse(req.body)
+houseRouter.get('/:houseId', (req, res) => {
+    houseApi.singleHouse(req.params.houseId)
       .then((house) => {
           res.json(house)
       })

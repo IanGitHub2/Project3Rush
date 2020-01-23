@@ -32,7 +32,7 @@ export default class SingleHouse extends React.Component {
         return(
             <div>
                 {this.state.redirect === true ? <Redirect to='/house-home'/> : null}
-                <Link to={'/house-home'}></Link>
+                <Link to={'/house-home/'}>Home</Link>
                 <div>
                     <h1>{this.state.house.company}</h1>
                     <div>
