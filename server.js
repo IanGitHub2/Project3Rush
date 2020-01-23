@@ -18,6 +18,7 @@ const app = express()
  */
 const { postRouter } = require('./controllers/post.js')
 const { houseRouter } = require('./controllers/house.js')
+const { shoeRouter } = require('./controllers/shoe.js')
 
 
 /* Step 3
@@ -52,6 +53,7 @@ app.use(express.static(`${__dirname}/client/build`))
  */
 app.use('/api/post', postRouter)
 app.use('/api/house', houseRouter)
+app.use('/api/shoe', shoeRouter)
 
 /* Step 5
  *

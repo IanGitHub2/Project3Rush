@@ -12,7 +12,7 @@ const ShoeSchema = new Schema({
 
 const ShoeCollection = mongoose.model('Shoe', ShoeSchema)
 
-const getAllSHoe = () => {
+const getAllShoe = () => {
     return ShoeCollection.find()
 }
 
@@ -33,7 +33,7 @@ const deleteShoe = (shoeId) => {
 }
 
 module.exports = {
-    getAllSHoe,
+    getAllShoe,
     singleShoe,
     addShoe,
     updateShoe,
