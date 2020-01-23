@@ -5,7 +5,7 @@ export default class ShoeList extends React.Component{
     render(){
         return(
             <div>
-                {this.props.ShoeList.map((shoe, i) => {
+                {this.props.shoeList.map((shoe, i) => {
                     return(
                         <div>
                             <div>
