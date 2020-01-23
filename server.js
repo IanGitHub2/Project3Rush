@@ -17,6 +17,7 @@ const app = express()
  *
  */
 const { postRouter } = require('./controllers/post.js')
+const { houseRouter } = require('./controllers/house.js')
 
 
 /* Step 3
@@ -50,6 +51,7 @@ app.use(express.static(`${__dirname}/client/build`))
  * the paths defined in the router.
  */
 app.use('/api/post', postRouter)
+app.use('/api/house', houseRouter)
 
 /* Step 5
  *
