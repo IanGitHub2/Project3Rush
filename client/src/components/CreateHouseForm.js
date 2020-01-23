@@ -5,8 +5,8 @@ import { Redirect } from 'react-router-dom'
 const newHouse = {
     company: '',
     image: '',
-    price: '',
-    year: '',
+    price: 0,
+    year: 0,
     description: ''
 }
 
@@ -28,7 +28,7 @@ export default class CreateHouseForm extends React.Component{
 
     formSubmit = (event) => {
         event.preventDefault()
-        axios.post('/api/house/', this.state.newHouse)
+        axios.post('/api/house', this.state.newHouse)
           .then(() => {
               this.setState({ redirect: true })
           })
@@ -38,7 +38,7 @@ export default class CreateHouseForm extends React.Component{
         <div>
           <h1>Create a House Listing</h1>
             <form onSubmit={this.formSubmit}>
-              {this.state.redirect === true ? <Redirect to='house-home/'/> : null}
+              {this.state.redirect === true ? <Redirect to='/house-home'/> : null}
               <div>
                 <input
                   type='text'

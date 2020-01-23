@@ -10,8 +10,8 @@ export default class HouseHome extends React.Component {
         {
           company: '',
           image: '',
-          price: '',
-          year: '',
+          price: 0,
+          year: 0,
           description: ''
       }
     ]

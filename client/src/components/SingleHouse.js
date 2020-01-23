@@ -8,8 +8,8 @@ export default class SingleHouse extends React.Component {
         house: {
             company: '',
             image: '',
-            price: '',
-            year: '',
+            price: 0,
+            year: 0,
             description: ''
         }
     }
@@ -21,8 +21,17 @@ export default class SingleHouse extends React.Component {
           })
     }
 
+    houseInputChanges = (event) => {
+        const value = event.target.value;
+        const name = event.target.name;
+    
+        const newState = { ...this.state };
+        newState.house[name] = value;
+        this.setState(newState);
+      }
+
     deleteHouse = () => {
-        axios.delete(`/api/post/${this.props.match.params.houseId}`)
+        axios.delete(`/api/house/${this.props.match.params.houseId}`)
           .then(() => {
               this.setState({ redirect: true})
           })
@@ -32,7 +41,7 @@ export default class SingleHouse extends React.Component {
         return(
             <div>
                 {this.state.redirect === true ? <Redirect to='/house-home'/> : null}
-                <Link to={'/house-home/'}>Home</Link>
+                <Link to={`/house-home`}>Home</Link>
                 <div>
                     <h1>{this.state.house.company}</h1>
                     <div>
