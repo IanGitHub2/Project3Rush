@@ -2,7 +2,7 @@
 ## Rush
 
 - [GitHub](https://git.generalassemb.ly/IanGtHbE1/Project-3-Rush.git)
-- [Trello](https://trello.com/invite/b/wHalkJrN/44953d89cf9a08f4864e5cba4219ef4a/project-3)
+- [Trello](https://trello.com/b/wHalkJrN/project-3)
 - [Heroku](https://rush-project-3.herokuapp.com/)
 
 # WireFrame
