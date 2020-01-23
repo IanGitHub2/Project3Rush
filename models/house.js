@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const HouseSchema = new Schema({
     company: String,
     image: String,
-    Price: Number,
-    Year: Number,
+    price: Number,
+    year: Number,
     description: String
 })
 

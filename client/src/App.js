@@ -18,6 +18,7 @@ function App() {
           <Route exact path="/create-post" component={CreatePostForm}/>
           <Route exact path="/single-post/:postId" component={SinglePost}/>
           {/* <Route exact peth="/update-post/:postId" component={UpdatePost}/> */}
+          <Route exact path="/house-home" component={HouseHome}/>
         </Switch>
       </Router>
     </div>
