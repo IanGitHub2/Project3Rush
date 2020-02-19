@@ -1,9 +1,23 @@
+#singlePostPage{
+    background-image: url(https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+}
+
 #pageheader {
     margin: auto auto 50px 30px;
     font-size: 4em;
     color: #131313;
     letter-spacing: .15em;
     text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+}
+
+#backButtonDiv{
+    display: flex;
+    justify-content: center;
+}
+#backButton{
+    padding: 10px 40px;
+    background-color: whitesmoke;
+    border-radius: 10px;
 }
 
 #singleimage{
@@ -15,6 +29,7 @@
 
 #singleposthousing{
     border-top: black solid 4px;
+    background-color: whitesmoke;
     margin: 10px auto;
     padding: 10px 10px;
 }

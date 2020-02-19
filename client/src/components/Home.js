@@ -53,10 +53,14 @@ export default class Home extends Component {
         return (
             <div id="bodyid">
                 <div>
+                  <div>
                     <h1 id="welcometitle">Welcome To Rush</h1>
-                    <Link to={`/create-post`}>
-                      <button id="createbutton">Create Post</button>
-                    </Link>
+                  </div>
+                    <div>
+                      <Link to={`/create-post`}>
+                        <button id="createbutton">Create Post</button>
+                      </Link>
+                    </div>
                 </div>
                 <div id="homepagecontainer">
                   <PostList postList={this.state.postList}/>

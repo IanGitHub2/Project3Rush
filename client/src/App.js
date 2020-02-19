@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <ul>
+      <ul id="NavBar">
         <Link to={'/'}>Rush </Link>
         <Link to={'/house-home'}> / Homes </Link>
         <Link to={'/shoe-home'}> / Shoes</Link>

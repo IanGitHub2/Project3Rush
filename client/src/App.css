@@ -1,6 +1,11 @@
 .App {
   /* text-align: center; */
 }
+#NavBar{
+  background-color: gray;
+  margin: auto;
+  padding: 5px 5px;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

@@ -38,25 +38,29 @@ export default class SinglePost extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="singlePostPage">
          {this.state.redirect === true ? <Redirect to='/' /> : null}
-        <Link to={`/`}>Home</Link>
         <div>
           <h1 id="pageheader">{this.state.post.title}</h1>
           <div>
             <div>
+              <div id="backButtonDiv">
+                <Link to={`/`}>
+                  <button id="backButton">Back</button>
+                </Link>
+              </div>
               <img src={this.state.post.image} alt="car" id="singleimage"/>
             </div>
             <div id="singleposthousing">
-              <div>{this.state.post.title}</div>
+              <div><strong>{this.state.post.title}</strong></div>
               <div>Manufacturer{this.state.manu}</div>
               <div>Model{this.state.model}</div>
               <div>Description:{this.state.post.description}</div>
+              <Link to={`/update-post`}>
+                <button>Update Post</button>
+              </Link>
+              <button onClick={this.deletePost} id="deletebutton">Delete</button>
             </div>
-            <Link to={`/update-post`}>
-              <button>Update Post</button>
-            </Link>
-            <button onClick={this.deletePost} id="deletebutton">Delete</button>
           </div>
         </div>
       </div>
